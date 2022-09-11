@@ -19,7 +19,7 @@ def balloon_message(msg):
     output = dedent(
         f"""
      .{topbar}.
-    [ {phrase} ]
+    ( {phrase} )
      '{bottombar}'
          \\
 	"""
