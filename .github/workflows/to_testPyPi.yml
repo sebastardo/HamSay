@@ -1,0 +1,23 @@
+
+name: CI Testing
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Publish at testPyPi
+      run: |
+        pip install poetry
+        poetry install
+        poetry config repositories.testpypi https://test.pypi.org/legacy/
+        poetry build
+        poetry publish -r testpypi -u sebastardo -p this_is_no_my_pass
