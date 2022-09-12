@@ -17,6 +17,9 @@ pre-commit = "^2.20.0"
 black = "^22.8.0"
 pylint = "^2.15.2"
 
+[tool.poetry.scripts]
+hamsay = "hamsay.main:main"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
