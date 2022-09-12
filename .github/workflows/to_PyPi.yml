@@ -1,0 +1,22 @@
+name: Upload to PyPi
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Publish at PyPi
+      run: |
+        pip install poetry
+        poetry install
+        poetry config http-basic.pypi sebastardo this_is_not_my_pass
+        poetry build
+        poetry publish
