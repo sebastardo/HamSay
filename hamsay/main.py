@@ -2,7 +2,7 @@
 import sys
 from hamsay import hamster, pervert, halp, sebi  # damn pylint
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 def main():
