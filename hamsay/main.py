@@ -1,5 +1,6 @@
 """The HAMSTER"""
-import sys
+import sys 
+import click
 from hamsay import hamster, pervert, halp, sebi  # damn pylint
 
 __version__ = "0.1.1"
