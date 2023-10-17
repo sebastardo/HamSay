@@ -6,7 +6,7 @@ __version__ = "0.1.1"
 
 
 def main():
-    """The main issue"""
+    """The main issue sucks"""
 
     if len(sys.argv) == 1:
         hamster("EL ABURRIDO DEL PUEBLO")
