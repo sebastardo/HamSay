@@ -1,12 +1,13 @@
 """The HAMSTER"""
-import sys
+import sys 
+import click
 from hamsay import hamster, pervert, halp, sebi  # damn pylint
 
 __version__ = "0.1.1"
 
 
 def main():
-    """The main issue"""
+    """The main issue sucks"""
 
     if len(sys.argv) == 1:
         hamster("EL ABURRIDO DEL PUEBLO")
